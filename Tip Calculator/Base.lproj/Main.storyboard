@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,135 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OeF-aD-S0U">
+                                <rect key="frame" x="0.0" y="0.0" width="837" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-pN-WSd">
+                                <rect key="frame" x="237" y="175" width="126" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-zL-SQM">
+                                <rect key="frame" x="169" y="302" width="263" height="29"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="tipOptionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gwv-CB-kuP"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cost Per Person:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4R-8y-qw9">
+                                <rect key="frame" x="213" y="235" width="175" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip Cost:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-h9-5ja">
+                                <rect key="frame" x="236" y="110" width="129" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-DG-CP1">
+                                <rect key="frame" x="267" y="266" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-xc-6lR">
+                                <rect key="frame" x="254" y="204" width="92" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label     " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-tV-Uhd">
+                                <rect key="frame" x="268" y="138" width="64" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter dinner cost here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JNt-ol-gWu">
+                                <rect key="frame" x="198" y="62" width="205" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0030100894919999998" blue="0.23332938759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="billDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="2C9-f4-Lid"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyK-6Q-JAc">
+                                <rect key="frame" x="216" y="28" width="169" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-gs-Ami">
+                                <rect key="frame" x="192" y="55" width="41" height="41"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0030100894917476496" blue="0.23332938762626265" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number of People in Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfX-V2-1HK">
+                                <rect key="frame" x="188" y="410" width="224" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-Sy-erx">
+                                <rect key="frame" x="253" y="369" width="94" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="onStepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fnk-RL-80g"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-Ve-7ua">
+                                <rect key="frame" x="263" y="340" width="75" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JNt-ol-gWu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2z2-xt-xw5"/>
+                            <constraint firstItem="qGg-Sy-erx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIg-Kw-eDa"/>
+                            <constraint firstItem="u0a-h9-5ja" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jei-JA-rjb"/>
+                            <constraint firstItem="GYG-tV-Uhd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LFH-Ky-ZOf"/>
+                            <constraint firstItem="fGE-DG-CP1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5H-Vn-GM0"/>
+                            <constraint firstItem="KyK-6Q-JAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNJ-0A-HcC"/>
+                            <constraint firstItem="nM6-Ve-7ua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TUd-Bv-8e7"/>
+                            <constraint firstItem="UfX-V2-1HK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yqj-7f-jW2"/>
+                            <constraint firstItem="OeF-aD-S0U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bTZ-wg-udr"/>
+                            <constraint firstItem="OeF-aD-S0U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e5L-ko-1Fv"/>
+                            <constraint firstItem="3Dh-xc-6lR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goo-iI-qrA"/>
+                            <constraint firstItem="hyj-zL-SQM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iNG-NK-dOP"/>
+                            <constraint firstItem="bmh-gs-Ami" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-94" id="mNW-4F-0zT"/>
+                            <constraint firstItem="Q4R-8y-qw9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sDV-oR-aBW"/>
+                            <constraint firstItem="kK9-pN-WSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t43-Rn-jE7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="JNt-ol-gWu" id="vnX-u7-s6c"/>
+                        <outlet property="costPerPersonLabel" destination="fGE-DG-CP1" id="4fb-y9-zcU"/>
+                        <outlet property="numberOfPeopleLabel" destination="nM6-Ve-7ua" id="dZe-mV-qbs"/>
+                        <outlet property="peopleStepper" destination="qGg-Sy-erx" id="tRq-Bb-yNr"/>
+                        <outlet property="percentages" destination="hyj-zL-SQM" id="Usj-Gx-89F"/>
+                        <outlet property="tipLabel" destination="GYG-tV-Uhd" id="bI8-ja-BMl"/>
+                        <outlet property="totalLabel" destination="3Dh-xc-6lR" id="Pvj-bc-V4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="202" y="253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1600" height="1200"/>
+    </resources>
 </document>
